@@ -1,0 +1,196 @@
+/* styles.css */
+
+/* General Reset */
+body {
+    font-family: 'Comic Sans MS', cursives;
+    margin: 0;
+    padding: 0;
+    background-color: #000; /* Dark background */
+    color: #fff; /* White text */
+    line-height: 1.6;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #333; /* Darker blackish shade */
+    border-bottom: 2px solid yellow;
+}
+.navbar-brand, .nav-link {
+    color: yellow !important;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+.nav-link:hover {
+    color: pink !important;
+}
+
+/* Header */
+header {
+    background: linear-gradient(to bottom, #000, #333);
+    padding: 50px 0;
+}
+header img {
+    border: 5px solid yellow; /* เส้นขอบรอบรูป */
+    border-radius: 50%; /* ทำให้เป็นวงกลม */
+    width: 150px; /* ควบคุมขนาด */
+    height: 150px; /* ควบคุมขนาด (ต้องเท่ากับ width เพื่อคงเป็นวงกลม) */
+    object-fit: fill; /* ปรับภาพให้พอดีกับกรอบ */
+}
+header img:hover {
+    transform: none; /* ไม่มีการขยาย */
+}
+
+header h1 {
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 5px rgb(65, 159, 236);
+}
+header p a {
+    color: lightblue;
+    text-decoration: none;
+    border-bottom: 2px solid yellow;
+}
+header p a:hover {
+    color: pink;
+    border-color: pink;
+}
+
+/* Sections */
+section {
+    padding: 40px 20px;
+}
+.bg-light {
+    background-color: #222 !important;
+}
+h2 {
+    color: yellow; /* สีตัวอักษร */
+    text-shadow: 2px 4px 10px #5f9ea0; /* แสงประกายฟุ้งสีน้ำเงิน */
+    margin-bottom: 20px; /* ระยะห่างด้านล่าง */
+    display: inline-block; /* จัดให้อยู่ในบรรทัดเดียวกัน */
+    border-bottom: none; /* เอาเส้นใต้เดิมออก */
+    text-decoration: none; /* ป้องกันเส้นใต้จากสไตล์อื่น */
+    transition: text-shadow 0.3s ease-in-out; /* เพิ่มความนุ่มนวลในเอฟเฟกต์ */
+}
+
+/* เอฟเฟกต์เมื่อเมาส์ชี้ */
+h2:hover {
+    text-shadow: 2px 2px 15px #5f9ea0, 0 0 20px #5f9ea0; /* เพิ่มความฟุ้งและแสง */
+}
+
+p, li {
+    font-size: 1.1rem;
+}
+
+/* Skills Table */
+.table {
+    color: #3e98ff;
+    margin-top: IE 3;
+    border-spacing: 0 10px;
+    border-radius: 10px;
+    overflow: hidden;
+    border-collapse: separate; 
+    width: 100%;
+}
+.progress-bar {
+    transition: width 3s ease-in-out;
+    border-radius: 40px;
+    font-size: 0.6rem;
+}
+
+
+/* Contact */
+.at {
+    filter: grayscale(100%);
+    transition: filter 0.3s ease-in-out;
+}
+.at:hover {
+    filter: none;
+}
+a {
+    overflow: hidden;
+    position: relative;
+    display: inline-block;
+  }
+  
+  a::before,
+  a::after {
+   content: '';
+    position: absolute;
+    width: 100%;
+    left: 0;
+  }
+  a::before {
+    background-color: #54b3d6;
+    height: 2px;
+    bottom: 0;
+    transform-origin: 100% 50%;
+    transform: scaleX(0);
+    transition: transform .3s cubic-bezier(0.76, 0, 0.24, 1);
+  }
+  a::after {
+    content: attr(data-replace);
+    height: 100%;
+    top: 0;
+    transform-origin: 100% 50%;
+    transform: translate3d(200%, 0, 0);
+    transition: transform .3s cubic-bezier(0.76, 0, 0.24, 1);
+    color: #54b3d6;
+  }
+  
+  a:hover::before {
+    transform-origin: 0% 50%;
+    transform: scaleX(1);
+  }
+  a:hover::after {
+    transform: translate3d(0, 0, 0);
+  }
+  
+  a span {
+    display: inline-block;
+    transition: transform .3s cubic-bezier(0.76, 0, 0.24, 1);
+  }
+  
+  a:hover span {
+    transform: translate3d(-200%, 0, 0);
+  }
+
+/* Form */
+form {
+    background: #111;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 3px yellow;
+}
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 2px solid yellow;
+    border-radius: 5px;
+    background: #222;
+    color: white;
+}
+input:focus, textarea:focus {
+    border-color: pink;
+    outline: none;
+}
+input[type="submit"] {
+    background: yellow;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+}
+input[type="submit"]:hover {
+    background: pink;
+    color: white;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: yellow;
+    text-shadow: 1px 1px 2px pink;
+}
+footer p {
+    margin: 0;
+}
+
